@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "noEmit": true,
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "ems-components": ["src"],
+      "ems-components/*": ["src/*", "*"]
+    }
   },
-  "include": [
-    "src",
-    "./src/external.d.ts"
-  ]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
 }
